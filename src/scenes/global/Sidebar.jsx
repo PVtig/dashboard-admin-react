@@ -162,7 +162,7 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
-              title="Profile Form"
+              title="Report Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}

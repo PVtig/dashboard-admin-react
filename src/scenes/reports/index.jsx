@@ -8,15 +8,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Reports = () => {
-    const src = 'http://localhost/report'
-    const [articles, setArticles] = useState([]);
+
+  const src = 'http://localhost/report'
+  const [articles, setArticles] = useState([]);
     useEffect(()=>{
     axios
       .get(src)
       .then(resalt => {
         setArticles(resalt.data);
       })  
-    },[]);
+  },[]);
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
