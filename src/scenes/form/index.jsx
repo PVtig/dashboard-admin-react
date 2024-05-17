@@ -70,7 +70,7 @@ const Form = () => {
                 label="Mileage"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.email}
+                value={values.mileage}
                 name="mileage"
                 error={!!touched.mileage && !!errors.mileage}
                 helperText={touched.mileage && errors.mileage}
