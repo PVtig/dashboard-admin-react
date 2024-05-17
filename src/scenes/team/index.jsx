@@ -4,8 +4,11 @@ import { tokens } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import EngineeringIcon from '@mui/icons-material/Engineering';
 import Header from "../../components/Header";
+import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -55,7 +58,7 @@ const Team = () => {
       field: "type",
       headerName: "Access Level",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
+      renderCell: ({ row: { type } }) => {
         return (
           <Box
             width="60%"
@@ -64,19 +67,21 @@ const Team = () => {
             display="flex"
             justifyContent="center"
             backgroundColor={
-              access === "admin"
+              type === 1
                 ? colors.greenAccent[600]
-                : access === "manager"
+                : type === 2
                 ? colors.greenAccent[700]
                 : colors.greenAccent[700]
             }
             borderRadius="4px"
           >
-            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
-            {access === "manager" && <SecurityOutlinedIcon />}
-            {access === "user" && <LockOpenOutlinedIcon />}
+            {type === "admin" && <AdminPanelSettingsOutlinedIcon />}
+            {type === "manager" && <SecurityOutlinedIcon />}
+            {type === "user" && <LockOpenOutlinedIcon />}
+            {type === 1 && <AccessibleForwardIcon />}
+            {type === 2 && <EngineeringIcon />}
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {access}
+              {type}
             </Typography>
           </Box>
         );
