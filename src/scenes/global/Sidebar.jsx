@@ -66,7 +66,7 @@ const Sidebar = () => {
     >
       <ProSidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
-          {/* LOGO AND MENU ICON */}
+          {/* LO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
@@ -231,6 +231,13 @@ const Sidebar = () => {
             <Item
               title="Line Chart"
               to="/line"
+              icon={<TimelineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="fuil Chart"
+              to="/fuel"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

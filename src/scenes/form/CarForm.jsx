@@ -9,7 +9,7 @@ const CarForm = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
-      const src = 'http://localhost/report'
+      const src = 'http://localhost/car'
       axios.post(src, values)
       .then(function (response) {
         console.log(response);
@@ -50,6 +50,19 @@ const CarForm = () => {
               fullWidth
               variant="filled"
               type="number"
+              label="number"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.number}
+              name="number"
+              error={!!touched.number && !!errors.number}
+              helperText={touched.number && errors.number}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="number"
               label="type"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -76,39 +89,13 @@ const CarForm = () => {
               fullWidth
               variant="filled"
               type="number"
-              label="garage"
+              label="garage_id"
               onBlur={handleBlur}
               onChange={handleChange}
-              value={values.garage}
-              name="garage"
-              error={!!touched.garage && !!errors.garage}
-              helperText={touched.garage && errors.garage}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="number"
-              label="car_id"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.car_id}
-              name="car_id"
-              error={!!touched.car_id && !!errors.car_id}
-              helperText={touched.car_id && errors.car_id}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="number"
-              label="user_id"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.user_id}
-              name="user_id"
-              error={!!touched.user_id && !!errors.user_id}
-              helperText={touched.user_id && errors.user_id}
+              value={values.garage_id}
+              name="garage_id"
+              error={!!touched.garage_id && !!errors.garage_id}
+              helperText={touched.garage_id && errors.garage_id}
               sx={{ gridColumn: "span 2" }}
             />
             
