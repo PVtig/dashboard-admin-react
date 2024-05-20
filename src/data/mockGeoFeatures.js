@@ -5131,7 +5131,7 @@ export const geoFeatures = {
     {
       type: "Feature",
       properties: {
-        name: "France",
+        name: "Garage 2",
       },
       geometry: {
         type: "MultiPolygon",

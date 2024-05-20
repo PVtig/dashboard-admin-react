@@ -319,7 +319,7 @@ export const mockTransactions = [
 
 export const mockBarData = [
   {
-    country: "AD",
+    car: "ZIL-131",
     "fuel": 137,
     "fuelColor": "hsl(229, 70%, 50%)",
     spares: 96,
@@ -330,7 +330,7 @@ export const mockBarData = [
     profitColor: "hsl(340, 70%, 50%)",
   },
   {
-    country: "AE",
+    car: "URAL-4320",
     "fuel": 55,
     "fuelColor": "hsl(307, 70%, 50%)",
     spares: 28,
@@ -341,7 +341,7 @@ export const mockBarData = [
     profitColor: "hsl(275, 70%, 50%)",
   },
   {
-    country: "AF",
+    car: "KAMAZ-4310",
     "fuel": 109,
     "fuelColor": "hsl(72, 70%, 50%)",
     spares: 23,
@@ -352,7 +352,7 @@ export const mockBarData = [
     profitColor: "hsl(256, 70%, 50%)",
   },
   {
-    country: "AG",
+    car: "GAZ-66",
     "fuel": 133,
     "fuelColor": "hsl(257, 70%, 50%)",
     spares: 52,
@@ -363,7 +363,7 @@ export const mockBarData = [
     profitColor: "hsl(9, 70%, 50%)",
   },
   {
-    country: "AI",
+    car: "GAZ-3308",
     "fuel": 81,
     "fuelColor": "hsl(190, 70%, 50%)",
     spares: 80,
@@ -374,7 +374,7 @@ export const mockBarData = [
     profitColor: "hsl(285, 70%, 50%)",
   },
   {
-    country: "AL",
+    car: "KRAZ-6322",
     "fuel": 66,
     "fuelColor": "hsl(208, 70%, 50%)",
     spares: 111,
@@ -385,7 +385,7 @@ export const mockBarData = [
     profitColor: "hsl(76, 70%, 50%)",
   },
   {
-    country: "AM",
+    car: "KRAZ-219",
     "fuel": 80,
     "fuelColor": "hsl(87, 70%, 50%)",
     spares: 47,
@@ -411,9 +411,9 @@ export const mockPieData = [
     color: "hsl(162, 70%, 50%)",
   },
   {
-    id: "go",
-    label: "go",
-    value: 322,
+    id: "renovation",
+    label: "renovation",
+    value: 222,
     color: "hsl(291, 70%, 50%)",
   },
   {
@@ -432,51 +432,35 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "Garage 3",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
-        y: 101,
-      },
-      {
-        x: "helicopter",
+        x: "GAZ-3308",
         y: 75,
       },
       {
-        x: "boat",
-        y: 36,
-      },
-      {
-        x: "train",
+        x: "KRAZ-6322",
         y: 216,
       },
       {
-        x: "subway",
-        y: 35,
-      },
-      {
-        x: "bus",
+        x: "KAMAZ-4310",
         y: 236,
       },
       {
-        x: "car",
+        x: "KRAZ-219",
         y: 88,
       },
       {
-        x: "moto",
+        x: "ZIL-131",
         y: 232,
       },
       {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
+        x: "GAZ-66",
         y: 1,
       },
       {
-        x: "skateboard",
+        x: "URAL-4320",
         y: 35,
       },
       {
@@ -486,51 +470,35 @@ export const mockLineData = [
     ],
   },
   {
-    id: "france",
+    id: "Garage 2",
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
-        y: 212,
-      },
-      {
-        x: "helicopter",
+        x: "GAZ-3308",
         y: 190,
       },
       {
-        x: "boat",
-        y: 270,
-      },
-      {
-        x: "train",
+        x: "KRAZ-6322",
         y: 9,
       },
       {
-        x: "subway",
-        y: 75,
-      },
-      {
-        x: "bus",
+        x: "KAMAZ-4310",
         y: 175,
       },
       {
-        x: "car",
+        x: "KRAZ-219",
         y: 33,
       },
       {
-        x: "moto",
+        x: "ZIL-131",
         y: 189,
       },
       {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
+        x: "GAZ-66",
         y: 87,
       },
       {
-        x: "skateboard",
+        x: "URAL-4320",
         y: 299,
       },
       {
@@ -540,51 +508,35 @@ export const mockLineData = [
     ],
   },
   {
-    id: "us",
+    id: "Garage 1",
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "plane",
-        y: 191,
-      },
-      {
-        x: "helicopter",
+        x: "GAZ-3308",
         y: 136,
       },
       {
-        x: "boat",
-        y: 91,
-      },
-      {
-        x: "train",
+        x: "KRAZ-6322",
         y: 190,
       },
       {
-        x: "subway",
-        y: 211,
-      },
-      {
-        x: "bus",
+        x: "KAMAZ-4310",
         y: 152,
       },
       {
-        x: "car",
+        x: "KRAZ-219",
         y: 189,
       },
       {
-        x: "moto",
+        x: "ZIL-131",
         y: 152,
       },
       {
-        x: "bicycle",
-        y: 8,
-      },
-      {
-        x: "horse",
+        x: "GAZ-66",
         y: 197,
       },
       {
-        x: "skateboard",
+        x: "URAL-4320",
         y: 107,
       },
       {

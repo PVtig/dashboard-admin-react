@@ -9,7 +9,7 @@ const EmployeeForm = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
-      const src = 'http://localhost/report'
+      const src = 'http://localhost/user'
       axios.post(src, values)
       .then(function (response) {
         console.log(response);
@@ -50,6 +50,71 @@ const EmployeeForm = () => {
               fullWidth
               variant="filled"
               type="number"
+              label="name"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.name}
+              name="name"
+              error={!!touched.name && !!errors.name}
+              helperText={touched.name && errors.name}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="number"
+              label="phone"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.phone}
+              name="phone"
+              error={!!touched.phone && !!errors.phone}
+              helperText={touched.phone && errors.phone}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="number"
+              label="email"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.garage}
+              name="email"
+              error={!!touched.email && !!errors.email}
+              helperText={touched.email && errors.email}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="number"
+              label="surname"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.surname}
+              name="surname"
+              error={!!touched.surname && !!errors.surname}
+              helperText={touched.surname && errors.surname}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="number"
+              label="salary"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.salary}
+              name="salary"
+              error={!!touched.salary && !!errors.salary}
+              helperText={touched.salary && errors.salary}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="number"
               label="type"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -59,59 +124,6 @@ const EmployeeForm = () => {
               helperText={touched.type && errors.type}
               sx={{ gridColumn: "span 2" }}
             />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="number"
-              label="mileage"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.mileage}
-              name="mileage"
-              error={!!touched.mileage && !!errors.mileage}
-              helperText={touched.mileage && errors.mileage}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="number"
-              label="garage"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.garage}
-              name="garage"
-              error={!!touched.garage && !!errors.garage}
-              helperText={touched.garage && errors.garage}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="number"
-              label="car_id"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.car_id}
-              name="car_id"
-              error={!!touched.car_id && !!errors.car_id}
-              helperText={touched.car_id && errors.car_id}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="number"
-              label="user_id"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.user_id}
-              name="user_id"
-              error={!!touched.user_id && !!errors.user_id}
-              helperText={touched.user_id && errors.user_id}
-              sx={{ gridColumn: "span 2" }}
-            />
-            
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button  type="submit" color="secondary" variant="contained">
