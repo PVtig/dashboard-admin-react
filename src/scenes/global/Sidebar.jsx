@@ -16,6 +16,9 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import BadgeIcon from '@mui/icons-material/Badge';
+import CarCrashIcon from '@mui/icons-material/CarCrash';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -140,6 +143,13 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
+              title="Manage Car"
+              to="/car"
+              icon={<DirectionsCarIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
               title="Report List"
               to="/reports"
               icon={<ContactsOutlinedIcon />}
@@ -163,8 +173,22 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Report Form"
-              to="/form"
+              to="/reportForm"
               icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Car Form"
+              to="/carForm"
+              icon={<CarCrashIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Employee Form"
+              to="/employeeForm"
+              icon={<BadgeIcon />}
               selected={selected}
               setSelected={setSelected}
             />

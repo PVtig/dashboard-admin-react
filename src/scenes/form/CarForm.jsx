@@ -5,7 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
 import axios from "axios";
 
-const Form = () => {
+const CarForm = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
@@ -17,7 +17,8 @@ const Form = () => {
       .catch(function (error) {
         console.log(error);
       });
-    console.log(initialValues);
+      
+    console.log(values);
   };
 
   return (
@@ -132,4 +133,4 @@ const initialValues = {
   user_id: ""
 };
 
-export default Form;
+export default CarForm;

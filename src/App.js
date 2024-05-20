@@ -7,7 +7,7 @@ import Team from "./scenes/team";
 import Invoices from "./scenes/invoices";
 import Reports from "./scenes/reports";
 import Bar from "./scenes/bar";
-import Form from "./scenes/form";
+import ReportForm from "./scenes/form/ReportForm";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
@@ -15,6 +15,9 @@ import Geography from "./scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
+import Cars from "./scenes/cars";
+import EmployeeForm from "./scenes/form/EmployeeForm";
+import CarForm from "./scenes/form/CarForm";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -31,9 +34,12 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
+              <Route path="/car" element={<Cars />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/invoices" element={<Invoices />} />
-              <Route path="/form" element={<Form />} />
+              <Route path="/reportForm" element={<ReportForm />} />
+              <Route path="/employeeForm" element={<EmployeeForm />} />
+              <Route path="/carForm" element={<CarForm />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
