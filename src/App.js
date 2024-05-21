@@ -18,6 +18,7 @@ import Calendar from "./scenes/calendar/calendar";
 import Cars from "./scenes/cars";
 import EmployeeForm from "./scenes/form/EmployeeForm";
 import CarForm from "./scenes/form/CarForm";
+import FuelBar from "./scenes/fuel";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -41,6 +42,7 @@ function App() {
               <Route path="/employeeForm" element={<EmployeeForm />} />
               <Route path="/carForm" element={<CarForm />} />
               <Route path="/bar" element={<Bar />} />
+              <Route path="/fuel" element={<FuelBar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
               <Route path="/faq" element={<FAQ />} />
