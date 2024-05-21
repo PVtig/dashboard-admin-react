@@ -110,7 +110,7 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ed Roh
+                  Great Admin
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
                   VP Fancy Admin
@@ -222,6 +222,13 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
+              title="Fuel"
+              to="/fuel"
+              icon={<BarChartOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
               title="Pie Chart"
               to="/pie"
               icon={<PieChartOutlineOutlinedIcon />}
@@ -231,13 +238,6 @@ const Sidebar = () => {
             <Item
               title="Line Chart"
               to="/line"
-              icon={<TimelineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="fuil Chart"
-              to="/fuel"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
