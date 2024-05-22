@@ -24,7 +24,7 @@ const Reports = () => {
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "namber", headerName: "Namber" },
+    { field: "number", headerName: "Number" },
     {
       field: "user_id",
       headerName: "User_id",
@@ -41,11 +41,6 @@ const Reports = () => {
     {
       field: "mileage",
       headerName: "Mileage",
-      flex: 1,
-    },
-    {
-      field: "garage",
-      headerName: "Garage",
       flex: 1,
     },
     {
