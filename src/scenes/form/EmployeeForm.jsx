@@ -10,7 +10,7 @@ const EmployeeForm = () => {
 
   const handleFormSubmit = (values) => {
       const src = 'http://localhost/user'
-      axios.post(src, values)
+      axios.postForm(src, values)
       .then(function (response) {
         console.log(response);
       })
@@ -23,7 +23,7 @@ const EmployeeForm = () => {
 
   return (
     <Box m="20px">
-      <Header title="CREATE REPORT" subtitle="Create a New Report" />
+      <Header title="ADD EMPLOYEE" subtitle="Create a New Employee" />
 
       <Formik
         onSubmit={handleFormSubmit}
@@ -49,7 +49,7 @@ const EmployeeForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="name"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -62,7 +62,7 @@ const EmployeeForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="phone"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -75,7 +75,7 @@ const EmployeeForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="email"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -88,7 +88,7 @@ const EmployeeForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="surname"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -101,7 +101,7 @@ const EmployeeForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="salary"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -114,7 +114,7 @@ const EmployeeForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="type"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -127,7 +127,7 @@ const EmployeeForm = () => {
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button  type="submit" color="secondary" variant="contained">
-                Create New REPORT
+                Create New Employee
               </Button>
             </Box>
           </form>
@@ -138,11 +138,12 @@ const EmployeeForm = () => {
 };
 
 const initialValues = {
-  type: "",
-  mileage: "",
-  garage: "",
-  car_id: "",
-  user_id: ""
+  name: "",
+  surname: "",
+  phone: "",
+  email: "",
+  salary: "",
+  type: ""
 };
 
 export default EmployeeForm;

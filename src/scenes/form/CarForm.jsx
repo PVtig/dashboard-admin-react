@@ -9,21 +9,21 @@ const CarForm = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
-      const src = 'http://localhost/car'
-      axios.post(src, values)
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-      
-    console.log(values);
-  };
+    const src = 'http://localhost/car'
+    axios.postForm(src, values)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
+  console.log(values);
+};
 
   return (
     <Box m="20px">
-      <Header title="CREATE REPORT" subtitle="Create a New Report" />
+      <Header title="Add Car" subtitle="Add a New Car" />
 
       <Formik
         onSubmit={handleFormSubmit}
@@ -49,7 +49,7 @@ const CarForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="number"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -62,7 +62,7 @@ const CarForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="type"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -75,7 +75,7 @@ const CarForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="mileage"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -88,7 +88,7 @@ const CarForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="garage_id"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -98,11 +98,23 @@ const CarForm = () => {
               helperText={touched.garage_id && errors.garage_id}
               sx={{ gridColumn: "span 2" }}
             />
-            
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
+              label="status"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.status}
+              name="status"
+              error={!!touched.status && !!errors.status}
+              helperText={touched.status && errors.status}
+              sx={{ gridColumn: "span 2" }}
+            />
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button  type="submit" color="secondary" variant="contained">
-                Create New REPORT
+                Create New CAR
               </Button>
             </Box>
           </form>
@@ -113,11 +125,11 @@ const CarForm = () => {
 };
 
 const initialValues = {
+  number: "",
   type: "",
   mileage: "",
-  garage: "",
-  car_id: "",
-  user_id: ""
+  garage_id: "",
+  status: ""
 };
 
 export default CarForm;
