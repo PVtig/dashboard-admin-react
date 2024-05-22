@@ -10,7 +10,7 @@ const ReportForm = () => {
 
   const handleFormSubmit = (values) => {
       const src = 'http://localhost/report'
-      axios.post(src, values)
+      axios.postForm(src, values)
       .then(function (response) {
         console.log(response);
       })
@@ -27,7 +27,7 @@ const ReportForm = () => {
 
       <Formik
         onSubmit={handleFormSubmit}
-        initialValues={initialValues}
+        initialValues={initialReportValues}
       >
         {({
           values,
@@ -49,7 +49,20 @@ const ReportForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
+              label="number"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.number}
+              name="number"
+              error={!!touched.number && !!errors.number}
+              helperText={touched.number && errors.number}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
               label="type"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -62,7 +75,7 @@ const ReportForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="mileage"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -75,20 +88,7 @@ const ReportForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
-              label="garage"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.garage}
-              name="garage"
-              error={!!touched.garage && !!errors.garage}
-              helperText={touched.garage && errors.garage}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="number"
+              type="text"
               label="car_id"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -101,7 +101,7 @@ const ReportForm = () => {
             <TextField
               fullWidth
               variant="filled"
-              type="number"
+              type="text"
               label="user_id"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -125,10 +125,10 @@ const ReportForm = () => {
   );
 };
 
-const initialValues = {
+const initialReportValues = {
+  number: "",
   type: "",
   mileage: "",
-  garage: "",
   car_id: "",
   user_id: ""
 };

@@ -20,7 +20,7 @@ const Cars = () => {
   const columns = [
     { field: "id", headerName: "ID" },
     {
-      field: "namber",
+      field: "number",
       headerName: "Number",
       flex: 1,
       cellClassName: "name-column--cell",
