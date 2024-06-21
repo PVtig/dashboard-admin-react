@@ -1,5 +1,5 @@
 import { Box, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import { useEffect, useState } from "react";
@@ -51,7 +51,7 @@ const Cars = () => {
 
   return (
     <Box m="20px">
-      <Header title="TEAM" subtitle="Managing the Team Members" />
+      <Header title="CARS" subtitle="Managing the Cars" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -79,9 +79,17 @@ const Cars = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          }
         }}
       >
-        <DataGrid checkboxSelection rows={articles} columns={columns} />
+        <DataGrid 
+        checkboxSelection 
+        rows={articles} 
+        columns={columns} 
+        components={{ Toolbar: GridToolbar }}
+        />
       </Box>
     </Box>
   );
