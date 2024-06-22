@@ -23,7 +23,7 @@ const CarForm = () => {
 
   return (
     <Box m="20px">
-      <Header title="Add Car" subtitle="Add a New Car" />
+      <Header title="ADD CAR" subtitle="Add a New Car" />
 
       <Formik
         onSubmit={handleFormSubmit}
