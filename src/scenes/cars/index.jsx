@@ -1,9 +1,15 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
+import CheckIcon from '@mui/icons-material/Check';
+import ClearIcon from '@mui/icons-material/Clear';
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 
 const Cars = () => {
   const src = 'http://localhost/car'
@@ -46,6 +52,40 @@ const Cars = () => {
       field: "status",
       headerName: "Status",
       flex: 1,
+      renderCell: ({ row: { status } }) => {
+        return (
+          <Box
+            width="60%"
+            m="0 auto"
+            p="5px"
+            display="flex"
+            justifyContent="center"
+            backgroundColor={
+              status === 1
+                ? colors.blueAccent[600]
+                : status === 2
+                ? colors.greenAccent[600]
+                : status === 3
+                ? colors.orangeAccent[600]
+                : status === 4
+                ? colors.redAccent[600]
+                : status === 5
+                ? colors.primary[600]
+                : colors.greenAccent[700]
+            }
+            borderRadius="4px"
+          >
+            {status === 1 && <AccessibleForwardIcon />}
+            {status === 2 && <CheckIcon />}
+            {status === 3 && <EngineeringIcon />}
+            {status === 4 && <ReportProblemIcon />}
+            {status === 5 && <ClearIcon />}
+            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+              {status}
+            </Typography>
+          </Box>
+        );
+      },
     },
   ];
 

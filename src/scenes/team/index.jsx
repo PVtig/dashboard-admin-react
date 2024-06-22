@@ -70,7 +70,7 @@ const Team = () => {
               type === 1
                 ? colors.greenAccent[600]
                 : type === 2
-                ? colors.greenAccent[700]
+                ? colors.greenAccent[600]
                 : colors.greenAccent[700]
             }
             borderRadius="4px"
