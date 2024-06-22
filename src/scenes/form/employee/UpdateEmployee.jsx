@@ -2,28 +2,28 @@ import { Box, Button, TextField } from "@mui/material";
 import { Formik } from "formik";
 //import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 import axios from "axios";
 
-const CarForm = () => {
+const UpdateEmployee = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
-    const src = 'http://localhost/car'
-    axios.postForm(src, values)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-    
-  console.log(values);
-};
+      const src = 'http://localhost/user'
+      axios.postForm(src, values)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      
+    console.log(values);
+  };
 
   return (
     <Box m="20px">
-      <Header title="ADD CAR" subtitle="Add a New Car" />
+      <Header title="UPDATE EMPLOYEE" subtitle="Update Employee" />
 
       <Formik
         onSubmit={handleFormSubmit}
@@ -50,13 +50,65 @@ const CarForm = () => {
               fullWidth
               variant="filled"
               type="text"
-              label="number"
+              label="name"
               onBlur={handleBlur}
               onChange={handleChange}
-              value={values.number}
-              name="number"
-              error={!!touched.number && !!errors.number}
-              helperText={touched.number && errors.number}
+              value={values.name}
+              name="name"
+              error={!!touched.name && !!errors.name}
+              helperText={touched.name && errors.name}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
+              label="phone"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.phone}
+              name="phone"
+              error={!!touched.phone && !!errors.phone}
+              helperText={touched.phone && errors.phone}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
+              label="email"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.garage}
+              name="email"
+              error={!!touched.email && !!errors.email}
+              helperText={touched.email && errors.email}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
+              label="surname"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.surname}
+              name="surname"
+              error={!!touched.surname && !!errors.surname}
+              helperText={touched.surname && errors.surname}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
+              label="salary"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.salary}
+              name="salary"
+              error={!!touched.salary && !!errors.salary}
+              helperText={touched.salary && errors.salary}
               sx={{ gridColumn: "span 2" }}
             />
             <TextField
@@ -72,49 +124,10 @@ const CarForm = () => {
               helperText={touched.type && errors.type}
               sx={{ gridColumn: "span 2" }}
             />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="text"
-              label="mileage"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.mileage}
-              name="mileage"
-              error={!!touched.mileage && !!errors.mileage}
-              helperText={touched.mileage && errors.mileage}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="text"
-              label="garage_id"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.garage_id}
-              name="garage_id"
-              error={!!touched.garage_id && !!errors.garage_id}
-              helperText={touched.garage_id && errors.garage_id}
-              sx={{ gridColumn: "span 2" }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              type="text"
-              label="status"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.status}
-              name="status"
-              error={!!touched.status && !!errors.status}
-              helperText={touched.status && errors.status}
-              sx={{ gridColumn: "span 2" }}
-            />
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button  type="submit" color="secondary" variant="contained">
-                Create New CAR
+                Create New Employee
               </Button>
             </Box>
           </form>
@@ -125,11 +138,12 @@ const CarForm = () => {
 };
 
 const initialValues = {
-  number: "",
-  type: "",
-  mileage: "",
-  garage_id: "",
-  status: ""
+  name: "",
+  surname: "",
+  phone: "",
+  email: "",
+  salary: "",
+  type: ""
 };
 
-export default CarForm;
+export default UpdateEmployee;
