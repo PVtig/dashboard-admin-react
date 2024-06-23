@@ -50,6 +50,19 @@ const UpdateReport = () => {
               fullWidth
               variant="filled"
               type="text"
+              label="id"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.id}
+              name="id"
+              error={!!touched.id && !!errors.id}
+              helperText={touched.id && errors.id}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
               label="number"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -111,11 +124,10 @@ const UpdateReport = () => {
               helperText={touched.user_id && errors.user_id}
               sx={{ gridColumn: "span 2" }}
             />
-            
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button  type="submit" color="secondary" variant="contained">
-                Create New REPORT
+                Update REPORT
               </Button>
             </Box>
           </form>
@@ -126,6 +138,7 @@ const UpdateReport = () => {
 };
 
 const initialReportValues = {
+  id: "",
   number: "",
   type: "",
   mileage: "",

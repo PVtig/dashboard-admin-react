@@ -112,13 +112,23 @@ const Calendar = () => {
             initialEvents={[
               {
                 id: "12315",
-                title: "All-day event",
-                date: "2022-09-14",
+                title: "fuel supply",
+                date: "2024-09-14",
               },
               {
                 id: "5123",
-                title: "Timed event",
-                date: "2022-09-28",
+                title: "Delivery of spare parts",
+                date: "2024-09-16",
+              },
+              {
+                id: "5123",
+                title: "Delivery of 10 ZIL",
+                date: "2024-09-18",
+              },
+              {
+                id: "5123",
+                title: "Delivery of 10 KAMAZ",
+                date: "2024-09-28",
               },
             ]}
           />
