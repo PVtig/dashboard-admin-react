@@ -7,6 +7,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import { Tabs } from '@mui/material';
 import AddCar from './AddCar';
 import UpdateCar from './UpdateCar';
+import DeleteCar from './DeleteCar';
 
 export default function CarForms() {
   const [value, setValue] = React.useState('1');
@@ -28,12 +29,12 @@ export default function CarForms() {
       >
         <Tab value="1" label="ADD" />
         <Tab value="2" label="UPDATE" />
-        <Tab value="3" label="Item Three" />
+        <Tab value="3" label="DELETE" />
       </TabList>
     </Box>
         <TabPanel value="1"><AddCar /></TabPanel>
         <TabPanel value="2"><UpdateCar /></TabPanel>
-        <TabPanel value="3">Item Three</TabPanel>
+        <TabPanel value="3"><DeleteCar /></TabPanel>
       </TabContext>
     </Box>
   );

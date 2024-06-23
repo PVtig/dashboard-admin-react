@@ -50,6 +50,19 @@ const UpdateEmployee = () => {
               fullWidth
               variant="filled"
               type="text"
+              label="id"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={values.id}
+              name="id"
+              error={!!touched.id && !!errors.id}
+              helperText={touched.id && errors.id}
+              sx={{ gridColumn: "span 2" }}
+            />
+            <TextField
+              fullWidth
+              variant="filled"
+              type="text"
               label="name"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -127,7 +140,7 @@ const UpdateEmployee = () => {
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button  type="submit" color="secondary" variant="contained">
-                Create New Employee
+                Update Employee
               </Button>
             </Box>
           </form>
@@ -138,6 +151,7 @@ const UpdateEmployee = () => {
 };
 
 const initialValues = {
+  id: "",
   name: "",
   surname: "",
   phone: "",
