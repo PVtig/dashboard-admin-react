@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
@@ -47,6 +47,28 @@ const Reports = () => {
       headerName: "Type",
       flex: 1,
     },
+    {
+      field: "report",
+      headerName: "report",
+      flex: 1,
+      renderCell: ({ row: { id } }) => {
+        const string = 'reportPDF/' + id
+        return (
+          <Button
+            href={string}
+            variant="contained"
+            color="secondary"
+            width="60%"
+            m="0 auto"
+            p="10px"
+            display="flex"
+            justifyContent="center"
+            borderRadius="4px"
+          >PDF
+          </Button>
+        );
+      },
+    },
   ];
 
   return (
@@ -88,6 +110,7 @@ const Reports = () => {
         }}
       >
         <DataGrid
+          checkboxSelection 
           rows={articles}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
