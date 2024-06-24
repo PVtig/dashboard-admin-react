@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import EngineeringIcon from '@mui/icons-material/Engineering';
-import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
@@ -75,7 +74,7 @@ const Cars = () => {
             }
             borderRadius="4px"
           >
-            {status === 1 && <AccessibleForwardIcon />}
+            {status === 1 && <CheckIcon />}
             {status === 2 && <CheckIcon />}
             {status === 3 && <EngineeringIcon />}
             {status === 4 && <ReportProblemIcon />}
