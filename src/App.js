@@ -19,6 +19,7 @@ import FuelBar from "./scenes/fuel";
 import EmployeeForms from "./scenes/form/employee/EmployeeForms";
 import CarForms from "./scenes/form/car/CarForms";
 import ReportForms from "./scenes/form/report/ReportForms";
+import DocumentPage from "./PDF/DocumentPage";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -37,6 +38,7 @@ function App() {
               <Route path="/team" element={<Team />} />
               <Route path="/car" element={<Cars />} />
               <Route path="/reports" element={<Reports />} />
+              <Route path="/reportPDF/:id" element={<DocumentPage />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/reportForm" element={<ReportForms />} />
               <Route path="/employeeForm" element={<EmployeeForms />} />
